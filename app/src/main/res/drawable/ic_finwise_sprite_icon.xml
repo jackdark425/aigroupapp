@@ -1,0 +1,76 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="56dp"
+    android:height="56dp"
+    android:viewportWidth="56"
+    android:viewportHeight="56">
+  <group>
+    <clip-path
+        android:pathData="M0,0h56v56h-56z"/>
+    <!-- Background circle -->
+    <path
+        android:pathData="M28,4C40.15,4 50,13.85 50,26C50,38.15 40.15,48 28,48C15.85,48 6,38.15 6,26C6,13.85 15.85,4 28,4Z"
+        android:fillColor="#10B981"/>
+    <!-- Sprite/Fairy body -->
+    <path
+        android:pathData="M20,32C20,26.477 23.582,20 28,20C32.418,20 36,26.477 36,32C36,37.523 32.418,44 28,44C23.582,44 20,37.523 20,32Z"
+        android:fillColor="#ffffff"/>
+    <!-- Head -->
+    <path
+        android:pathData="M22,18C22,14.686 24.686,12 28,12C31.314,12 34,14.686 34,18C34,21.314 31.314,24 28,24C24.686,24 22,21.314 22,18Z"
+        android:fillColor="#ffffff"/>
+    <!-- Wings (left) -->
+    <path
+        android:pathData="M18,28C16,26 14,24 12,26C10,28 12,32 16,30C18,29 19,28.5 18,28Z"
+        android:fillColor="#F59E0B"/>
+    <path
+        android:pathData="M16,34C14,32 12,30 10,32C8,34 10,38 14,36C16,35 17,34.5 16,34Z"
+        android:fillColor="#F59E0B"/>
+    <!-- Wings (right) -->
+    <path
+        android:pathData="M38,28C40,26 42,24 44,26C46,28 44,32 40,30C38,29 37,28.5 38,28Z"
+        android:fillColor="#F59E0B"/>
+    <path
+        android:pathData="M40,34C42,32 44,30 46,32C48,34 46,38 42,36C40,35 39,34.5 40,34Z"
+        android:fillColor="#F59E0B"/>
+    <!-- Financial symbols - Dollar sign -->
+    <path
+        android:pathData="M26,14V22"
+        android:strokeWidth="1.5"
+        android:strokeColor="#10B981"/>
+    <path
+        android:pathData="M30,14V22"
+        android:strokeWidth="1.5"
+        android:strokeColor="#10B981"/>
+    <path
+        android:pathData="M28,12C30,12 32,13 32,15"
+        android:strokeWidth="1.5"
+        android:strokeColor="#10B981"
+        android:fillColor="#00000000"/>
+    <path
+        android:pathData="M24,19C24,21 26,22 28,22"
+        android:strokeWidth="1.5"
+        android:strokeColor="#10B981"
+        android:fillColor="#00000000"/>
+    <!-- Magic sparkles -->
+    <path
+        android:pathData="M42,18L44,20L42,22L40,20Z"
+        android:fillColor="#F59E0B"/>
+    <path
+        android:pathData="M14,20L16,22L14,24L12,22Z"
+        android:fillColor="#F59E0B"/>
+    <path
+        android:pathData="M36,12L37,13L36,14L35,13Z"
+        android:fillColor="#F59E0B"/>
+    <path
+        android:pathData="M20,12L21,13L20,14L19,13Z"
+        android:fillColor="#F59E0B"/>
+    <!-- Wand -->
+    <path
+        android:pathData="M32,36L38,42"
+        android:strokeWidth="2"
+        android:strokeColor="#F59E0B"/>
+    <path
+        android:pathData="M36,42C36,40.895 36.895,40 38,40C39.105,40 40,40.895 40,42C40,43.105 39.105,44 38,44C36.895,44 36,43.105 36,42Z"
+        android:fillColor="#F59E0B"/>
+  </group>
+</vector>

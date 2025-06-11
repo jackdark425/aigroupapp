@@ -1,0 +1,334 @@
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="lang_code">ja</string>
+
+    <string name="app_name">AIグループ</string>
+    <string name="scan_qr_code_overlay">QRコードをスキャン</string>
+    <string name="app_version_label">バージョン 1.0.0</string>
+    <string name="general_close">閉じる</string>
+
+    <string name="label_menu_set_session_title">会話タイトルの設定</string>
+    <string name="label_button_summary_session">会話のサマリー</string>
+    <string name="label_session_settings">会話設定</string>
+    <string name="label_delete_session">会話を削除</string>
+    <string name="hint_session_title">会話タイトル</string>
+
+    <string name="label_cancel">キャンセル</string>
+    <string name="label_confirm">確認</string>
+    <string name="hint_placeholder_chat_bottom_bar">ご質問があれば、お気軽にお尋ねください！</string>
+
+    <string name="label_confirm_delete_session">この会話を削除してもよろしいですか？この操作は取り消せません！</string>
+    <string name="label_llm_model">モデル</string>
+    <string name="label_play_camera">写真撮影</string>
+    <string name="label_plugin">プラグイン</string>
+    <string name="label_llm_props">パラメーター</string>
+    <string name="label_llm_context">コンテキスト</string>
+
+    <string name="toast_save_success">保存しました</string>
+    <string name="toast_save_fail">保存に失敗しました</string>
+    <string name="toast_copied">クリップボードにコピーしました</string>
+
+    <string name="label_share_to">共有</string>
+    <string name="label_loading">読み込み中</string>
+
+    <string name="label_bot_greeting_prompt"><xliff:g id="time_period" example="おはようございます">%1$s</xliff:g>、何かお手伝いできることはありますか？</string>
+    <string name="label_ask_me_prompt">私に何を尋ねたいですか？</string>
+    <string name="label_select_other_llm_label">別のモデルを選択</string>
+    <string name="label_upload_media">メディアコンテンツのアップロード</string>
+    <string name="label_talking">音声入力中です</string>
+    <string name="label_start_talk">音声入力開始</string>
+    <string name="label_last_chat_about">前回はこれについて話しました</string>
+
+    <string name="label_menu_copy">コピー</string>
+    <string name="label_menu_tts">テキスト読み上げ</string>
+    <string name="label_menu_regenerate">再生成</string>
+    <string name="label_menu_plugin_generated">%1$sプラグインによって生成</string>
+    <string name="label_menu_edit_msg">メッセージの編集</string>
+
+    <string name="label_pinned_sessions">ピン留めした会話</string>
+    <string name="label_unpinned_sessions">ピン留めを外す</string>
+    <string name="label_button_create_session">新しい会話を開始</string>
+
+    <string name="label_llm_model_props_setting">モデルパラメーター</string>
+    <string name="label_button_reset_llm_props">パラメーターのリセット</string>
+    <string name="label_button_reset_llm_prop_default_value">初期値に戻す</string>
+
+    <string name="label_llm_prop_temp">温度</string>
+    <string name="label_llm_prop_top_p">Top P</string>
+    <string name="label_llm_prop_presence_penalty">プレゼンスペナルティ</string>
+    <string name="label_llm_prop_frequency_penalty">頻度ペナルティ</string>
+
+    <string name="chat_provider_desc_official">GPT-4o、Gemini、Claude 3.5、DALL·Eなどをご利用いただけます。</string>
+    <string name="chat_provider_desc_openai">OpenAI公式API。GPT-3.5、GPT-4、GPT-4oなどのモデルをご利用いただけます。</string>
+    <string name="chat_provider_desc_anthropic">Claude 3.5などのモデルをご利用いただけます。</string>
+    <string name="chat_provider_desc_google">Google Gemini 1.5などのモデルをご利用いただけます。</string>
+    <string name="chat_provider_desc_mistral">Mistral AIの大規模モデルをご利用いただけます。</string>
+    <string name="chat_provider_desc_perplexity">Perplexity AIの大規模モデルをご利用いただけます。</string>
+    <string name="chat_provider_desc_groq">Gemma、LlamaなどのGroqプラットフォームの大規模モデルをご利用いただけます。</string>
+    <string name="chat_provider_desc_moonshot">Kimi AIモデルをご利用いただけます。</string>
+    <string name="chat_provider_desc_dashscope">通義千問モデルをご利用いただけます。ビデオ入力と通義万象画像生成に対応しています。</string>
+    <string name="chat_provider_desc_stepfun">Stepfunの大規模モデルと画像生成の大規模モデルをご利用いただけます。</string>
+    <string name="chat_provider_desc_baichuan">百川の大規模モデルをご利用いただけます。</string>
+    <string name="chat_provider_desc_aimass">太初の大規模モデルをご利用いただけます。</string>
+    <string name="chat_provider_desc_lingyiwanwu">易シリーズの大規模モデルをご利用いただけます。</string>
+    <string name="chat_provider_desc_brain360">360 Brain 360gpt2-proなどの大規模モデルと画像生成の大規模モデルをご利用いただけます。</string>
+    <string name="chat_provider_desc_xunfei">iFLYTEK Sparkの大規模モデルと画像生成の大規模モデルをご利用いただけます。</string>
+    <string name="chat_provider_desc_zhipu">智譜清言GLMの大規模モデルとcogView画像の大規模モデルをご利用いただけます。</string>
+    <string name="chat_provider_desc_baidu">Baidu AI Cloud、文心一言の大規模モデルをご利用いただけます。</string>
+
+    <string name="chat_provider_name_official">公式</string>
+    <string name="chat_provider_name_moonshot">Kimi AI</string>
+    <string name="chat_provider_name_dashscope">阿里巴巴達摩院</string>
+    <string name="chat_provider_name_stepfun">Stepfun</string>
+    <string name="chat_provider_name_baichuan">百川</string>
+    <string name="chat_provider_name_aimass">太初</string>
+    <string name="chat_provider_name_lingyiwanwu">灵机万物</string>
+    <string name="chat_provider_name_brain360">360 Brain</string>
+    <string name="chat_provider_name_xunfei">iFLYTEK</string>
+    <string name="chat_provider_name_zhipu">智谱清言</string>
+    <string name="chat_provider_name_baidu">Baidu AI Cloud</string>
+    <string name="chat_provider_name_openai">OpenAI</string>
+    <string name="chat_provider_name_anthropic">Anthropic</string>
+    <string name="chat_provider_name_google">Google</string>
+    <string name="chat_provider_name_mistral">Mistral</string>
+    <string name="chat_provider_name_perplexity">Perplexity</string>
+    <string name="chat_provider_name_groq">Groq</string>
+
+    <string name="label_set_chat_service_token">トークンの設定</string>
+    <string name="label_chat_service_enable">サービス有効</string>
+    <string name="label_chat_service_available">利用可能なサービス</string>
+
+    <string name="label_session_history">履歴</string>
+    <string name="hint_placeholder_search_session">会話内容を検索</string>
+
+    <string name="label_session_filter_all">すべて</string>
+    <string name="label_session_filter_today">今日</string>
+    <string name="label_session_filter_yesterday">昨日</string>
+    <string name="label_session_filter_earlier">それ以前</string>
+
+    <string name="label_menu_create_session_clone">コピーを作成</string>
+
+    <string name="label_desc_set_llm_context">一度に送信できるコンテキストメッセージの最大数を設定します。</string>
+    <string name="label_no_limit_llm_context">無制限</string>
+
+    <string name="label_gallery">ギャラリー</string>
+    <string name="label_gallery_full">ギャラリーから選択</string>
+    <string name="label_take_photo">写真撮影</string>
+    <string name="label_take_photo_full">カメラで写真撮影</string>
+    <string name="label_take_video">動画撮影</string>
+    <string name="label_take_video_full">動画撮影</string>
+
+    <string name="label_guess_question_for_media_prompt">尋ねてみたいこと:</string>
+
+    <string name="label_image_provider_name_official">公式</string>
+    <string name="label_image_provider_name_cogview">智譜</string>
+    <string name="label_image_provider_name_brain360">360 Brain</string>
+    <string name="label_image_provider_name_qwen">通義万象</string>
+    <string name="label_image_provider_name_stepfun">Stepfun</string>
+
+    <string name="label_menu_regenerate_image">再生成</string>
+    <string name="toast_regenerate_image_fail">再生成に失敗しました</string>
+    <string name="label_plugin_name_text_to_image">テキストから画像</string>
+    <string name="label_image_generated_by">%1$sによって生成</string>
+    <string name="label_message_chat_readable_text_image">[画像] %1$s</string>
+    <string name="label_message_chat_readable_text_video">[動画] %1$s</string>
+
+    <string name="label_micro_button_interaction_guide">離すと送信、上にスワイプでキャンセル</string>
+    <string name="label_micro_button_release_cancel">離すとキャンセル</string>
+    <string name="label_micro_button_recognizing">認識中…</string>
+    <string name="label_micro_button_hold_to_speak">押して話す</string>
+
+    <string name="label_llm_model_custom_group_desc_simple">その他のモデル %1$s</string>
+    <string name="label_llm_model_group_desc_simple">%1$sの%2$sモデル</string>
+
+    <string name="label_select_llm_model">モデルを選択</string>
+    <string name="hint_placeholder_search_llm_model">モデルを検索</string>
+    <string name="label_stared_llm_model">お気に入りモデル</string>
+    <string name="label_model_load_fail">読み込みに失敗しました：%1$s</string>
+    <string name="label_llm_popup_current_selected">現在選択中</string>
+
+    <string name="hint_placeholder_textfield_default">入力してください…</string>
+
+    <string name="label_user_profile">プロフィール</string>
+    <string name="label_button_edit_username">ユーザー名の変更</string>
+    <string name="hint_new_username">新しいユーザー名</string>
+    <string name="label_button_select_avatar">アバターの再選択</string>
+    <string name="label_button_restore_avatar">デフォルトのアバターに戻す</string>
+    <string name="label_llm_prop_desc_temp">温度が高いほど、生成されるテキストはより創造的になります。</string>
+    <string name="label_llm_prop_desc_top_p">Top Pサンプリング。ランダム性と似ていますが、両方同時に変更しないようにしてください。</string>
+    <string name="label_llm_prop_desc_presence_penalty">プレゼンスペナルティ。値が高いほど、新しいトピックを探求する可能性が高まります。</string>
+    <string name="label_llm_prop_desc_frequency_penalty">頻度ペナルティ。値が高いほど、単語の繰り返しを減らすことができます。</string>
+    <string name="label_plugin_name_serper_search">オンライン検索</string>
+
+    <string name="label_session_settings_chatbot">チャットボット %1$s</string>
+    <string name="label_chatbot_come_from">%1$sから</string>
+    <string name="label_chatbot_created_at">%1$sに作成</string>
+
+    <string name="toast_already_latest_version">既に最新バージョンです</string>
+    <string name="toast_cache_cleared">キャッシュをクリアしました</string>
+    <string name="toast_data_cleared">ローカルデータをクリアしました</string>
+
+    <string name="label_settings_general">一般</string>
+    <string name="label_settings_tts">音声サービス設定</string>
+    <string name="label_settings_tts_service_provider">音声合成サービス</string>
+    <string name="label_settings_tts_timbre">音声選択</string>
+    <string name="label_settings_tts_test">音声テスト</string>
+    <string name="label_settings_backup_created_at">%1$s バックアップ</string>
+    <string name="label_settings_backup_no_backup">バックアップなし</string>
+    <string name="label_settings_chat_token">トークン設定</string>
+    <string name="label_settings_llm_model_default">デフォルトのチャットモデル</string>
+    <string name="label_settings_llm_props_default">デフォルトのチャットパラメーター</string>
+    <string name="label_settings_text2img">画像生成</string>
+    <string name="label_settings_text2img_service_provider">テキストから画像サービス</string>
+    <string name="label_settings_text2img_model">テキストから画像モデル</string>
+    <string name="label_settings_text2img_resolution">テキストから画像の品質</string>
+    <string name="label_settings_text2img_number">画像数</string>
+    <string name="label_settings_text2video">動画生成</string>
+    <string name="label_settings_text2video_model">動画生成モデル</string>
+    <string name="label_settings_search_online">オンライン検索</string>
+    <string name="label_settings_serper_service">Serper検索サービス</string>
+    <string name="label_settings_item_already_set">有効</string>
+    <string name="label_settings_item_not_set">設定されていません</string>
+    <string name="label_settings_appearance">外観</string>
+    <string name="label_settings_chat_detail_page_mode">チャットページモード</string>
+    <string name="label_settings_app_theme">アプリテーマ</string>
+    <string name="label_settings_privacy_data">プライバシーとデータ</string>
+    <string name="label_settings_backup_data">データバックアップ</string>
+    <string name="label_settings_clear_cache">キャッシュのクリア</string>
+    <string name="label_settings_clear_data">ローカルデータのクリア</string>
+    <string name="label_settings_others">その他</string>
+    <string name="label_settings_check_update">アップデートを確認</string>
+    <string name="label_settings_current_version">現在のバージョン %1$s</string>
+    <string name="label_settings_about">%1$sについて</string>
+    <string name="label_settings_share">%1$sを共有</string>
+    <string name="label_settings_app_language">言語</string>
+    <string name="label_settings_lang_auto">システムに従う</string>
+
+    <string name="label_confirm_clear_cache">%1$sMBのキャッシュをクリアしますか？</string>
+    <string name="label_confirm_clear_data">すべてのローカルデータをクリアしますか？この操作は取り消せません！</string>
+
+    <string name="label_theme_mode_follow_system">システムに従う</string>
+    <string name="label_theme_mode_bright">明るい</string>
+    <string name="label_theme_model_dark">暗い</string>
+
+    <string name="label_chat_ui_mode_doc">ドキュメントモード</string>
+    <string name="label_chat_ui_mode_bubble">チャットバブル</string>
+
+    <string name="toast_token_cannot_empty">トークンは空にできません</string>
+    <string name="label_menu_input_app_token">トークンの入力</string>
+    <string name="label_menu_qrcode_app_token">QRコードのスキャン</string>
+    <string name="label_menu_qrcode_gallery_app_token">画像からのQRコード認識</string>
+    <string name="hint_input_app_token">トークン</string>
+
+    <string name="label_service_setup">%1$sの設定</string>
+    <string name="label_service_setup_basic_info">基本情報</string>
+    <string name="label_service_setup_set_token">トークン設定</string>
+    <string name="hint_service_setup_token">%1$sのトークン</string>
+    <string name="label_button_service_setup_official_site">%1$s公式ウェブサイトへ</string>
+
+    <string name="label_plugin_name_video_generation">動画生成</string>
+    <string name="label_video_generated_by">%1$sによって生成</string>
+
+    <string name="video_generation_service_provider_cogviewx">智譜 CogViewX</string>
+
+    <string name="tts_service_provider_azure">Azure音声サービス</string>
+    <string name="tts_service_provider_tts_1">OpenAI tts-1</string>
+    <string name="tts_service_provider_tts_1_hd">OpenAI tts-1-hd</string>
+
+    <string name="label_welcome_greeting_to_user">こんにちは、%1$sさん</string>
+    <string name="label_welcome_ask_for_custom_avatar">アバターをカスタマイズしますか？</string>
+    <string name="label_welcome_button_continue">続行</string>
+    <string name="label_welcome_greeting">ようこそ</string>
+    <string name="label_welcome_init_app_desc">簡単な手順で初期化を完了しましょう</string>
+    <string name="label_welcome_button_start">開始</string>
+    <string name="label_welcome_select_llm_model">デフォルトのチャットモデルを選択</string>
+    <string name="label_welcome_select_llm_model_desc">好きなモデルを選んでください。後で設定で変更したり、追加したりできます。</string>
+    <string name="label_welcome_setup_username">ユーザー名を設定</string>
+    <string name="label_welcome_setup_username_desc">エージェントとアシスタントロボットがあなたの名前を覚えます。</string>
+    <string name="hint_welcome_placeholder_setup_username">ユーザー名を入力</string>
+
+    <string name="label_settings_sessions_count">チャットセッション数</string>
+    <string name="label_settings_commonly_llm_model">よく使うモデル</string>
+    <string name="label_settings_no_commonly_llm_model">なし</string>
+    <string name="label_settings_my_media_content">私のメディアコンテンツ</string>
+    <string name="label_settings_media_content_empty">現在メディアはありません。チャットで画像をアップロードしてください。</string>
+    <string name="toast_add_remove_config_success">設定を追加しました</string>
+    <string name="toast_add_remove_config_fail">設定の追加に失敗しました：%1$s</string>
+    <string name="label_settings_add_remote_config">設定を追加</string>
+    <string name="label_settings_confirm_add_remote_config">この設定を追加してもよろしいですか？ローカル設定は上書きされます。</string>
+    <string name="label_guide_question_1">🎉 どのようなチャットモデルがサポートされていますか？</string>
+    <string name="label_guide_question_2">🦈 ヒーローシャークの物語を語ってください</string>
+    <string name="label_guide_question_3">🖼️ 子猫を描いてください</string>
+    <string name="label_guide_question_4">📐 この数学の問題を解いてください</string>
+    <string name="label_guide_question_5">🏋️ プラン作成を手伝ってください</string>
+    <string name="label_guide_question_6">🎬 今日の映画のおすすめを教えてください</string>
+    <string name="label_tts_text_text">こんにちは、あなたのパーソナルAIアシスタントです</string>
+
+    <string name="label_guide_question_1_answer">
+        こんにちは！AIGroupへようこそ！\n\n
+
+        AIGroupはGPT-4o、o1-previewを含むすべてのOpenAIモデルをサポートしており、Gemini、Claude、通義千問などの様々な大手企業のモデル、Llamaなどのオープンソースモデルもサポートしています。\n\n
+
+        AIGroupは**画像分析**と**動画分析**もサポートしています。右下のボタンをクリックして添付ファイルを追加してみてください。\n\n
+
+        その他ご質問やご不明な点がございましたら、お気軽にご連絡ください！
+    </string>
+
+    <string name="label_guess_question_for_video_1">動画の内容は何ですか？</string>
+    <string name="label_guess_question_for_video_2">動画の主な内容を要約してください</string>
+    <string name="label_guess_question_for_image_1">写真には何が写っていますか？</string>
+    <string name="label_guess_question_for_image_2">写真について詩を書いてください</string>
+    <string name="label_guess_question_for_media_1">これを説明してもらえますか？</string>
+    <string name="label_guess_question_for_media_2">ソーシャルメディアの投稿を作成するのを手伝ってください</string>
+    <string name="label_guess_question_for_media_3">写真のスキルを評価してください！</string>
+    <string name="llm_model_group_openai">OpenAI</string>
+    <string name="llm_model_group_gemini">Google</string>
+    <string name="llm_model_group_qwen">通義千問</string>
+    <string name="llm_model_group_claude">Anthropic</string>
+    <string name="llm_model_group_llama">Llamaファミリー</string>
+    <string name="llm_model_group_glm">智譜清言</string>
+    <string name="llm_model_group_moonshot">Moonshot</string>
+    <string name="llm_model_group_stepfun">Step</string>
+    <string name="llm_model_group_baichuan">百川</string>
+    <string name="llm_model_group_taichu">太初</string>
+    <string name="llm_model_group_lingyiwanw">易シリーズ</string>
+    <string name="llm_model_group_brain360">360 GPT</string>
+    <string name="llm_model_group_spark">iFLYTEK Spark</string>
+    <string name="llm_model_group_ernie">文心一言</string>
+    <string name="llm_model_group_mistral">Mistral</string>
+    <string name="llm_model_group_perplexity">Perplexity</string>
+    <string name="llm_model_group_groq">Groq</string>
+    <string name="llm_model_group_gemma">Gemma</string>
+    <string name="llm_model_group_llava">LlaVA</string>
+
+    <string name="label_untitled_chat">新しい会話</string>
+
+    <string name="label_service_usage_serper">オンラインGoogle検索とウェブサービスへのアクセスにはSerperを設定してください。</string>
+
+    <string name="label_prompt_example_online_search">検索結果に基づくと、2021年のノーベル賞受賞者はマリア・レッサです。</string>
+
+    <string name="chat_message_video_generation_working">"%1$s"に基づいて動画を生成しています。処理には時間がかかる場合がありますので、後ほどご確認ください。</string>
+    <string name="chat_message_video_generation_generated_message">こちらが、あなたのリクエストに基づいて生成した動画です。</string>
+    <string name="chat_message_video_generation_generated_message_with_prompt">こちらが、"%1$s"に基づいて生成した動画です。</string>
+    <string name="chat_message_text2img_generated">こちらが、"%1$s"に基づいて生成した画像です。</string>
+
+    <string name="label_chat_message_error_template">申し訳ありませんが、エラーが発生しました。後でもう一度お試しください（%1$s）</string>
+
+    <string name="label_datetime_just_now">たった今</string>
+    <string name="label_date_time_today">今日</string>
+    <string name="label_date_time_yesterday">昨日</string>
+    <string name="label_date_time_two_days_ago">一昨日</string>
+    <string name="label_date_time_dawn">午前</string>
+    <string name="label_date_time_morning">午前</string>
+    <string name="label_date_time_noon">正午</string>
+    <string name="label_date_time_afternoon">午後</string>
+    <string name="label_date_time_evening">夜</string>
+    <plurals name="label_date_time_min_ago">
+        <item quantity="one">%d分前</item>
+        <item quantity="other">%d分前</item>
+    </plurals>
+
+
+    <string name="label_user_join_at">
+        参加日：<xliff:g id="time" example="2022-01-01">%1$s</xliff:g>
+    </string>
+</resources>

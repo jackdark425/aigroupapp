@@ -1,0 +1,77 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="56dp"
+    android:height="56dp"
+    android:viewportWidth="56"
+    android:viewportHeight="56">
+  <group>
+    <clip-path
+        android:pathData="M0,0h56v56h-56z"/>
+    <!-- Background circle -->
+    <path
+        android:pathData="M28,4C40.15,4 50,13.85 50,26C50,38.15 40.15,48 28,48C15.85,48 6,38.15 6,26C6,13.85 15.85,4 28,4Z"
+        android:fillColor="#2563EB"/>
+    <!-- Building/Enterprise structure -->
+    <path
+        android:pathData="M12,42V18C12,16.895 12.895,16 14,16H20C21.105,16 22,16.895 22,18V42H12Z"
+        android:fillColor="#ffffff"/>
+    <path
+        android:pathData="M24,42V14C24,12.895 24.895,12 26,12H32C33.105,12 34,12.895 34,14V42H24Z"
+        android:fillColor="#ffffff"/>
+    <path
+        android:pathData="M36,42V20C36,18.895 36.895,18 38,18H44C45.105,18 46,18.895 46,20V42H36Z"
+        android:fillColor="#ffffff"/>
+    <!-- Insight/Analytics lines -->
+    <path
+        android:pathData="M15,22H19"
+        android:strokeWidth="1.5"
+        android:strokeColor="#2563EB"/>
+    <path
+        android:pathData="M15,26H19"
+        android:strokeWidth="1.5"
+        android:strokeColor="#2563EB"/>
+    <path
+        android:pathData="M15,30H19"
+        android:strokeWidth="1.5"
+        android:strokeColor="#2563EB"/>
+    <path
+        android:pathData="M27,18H31"
+        android:strokeWidth="1.5"
+        android:strokeColor="#2563EB"/>
+    <path
+        android:pathData="M27,22H31"
+        android:strokeWidth="1.5"
+        android:strokeColor="#2563EB"/>
+    <path
+        android:pathData="M27,26H31"
+        android:strokeWidth="1.5"
+        android:strokeColor="#2563EB"/>
+    <path
+        android:pathData="M27,30H31"
+        android:strokeWidth="1.5"
+        android:strokeColor="#2563EB"/>
+    <path
+        android:pathData="M39,24H43"
+        android:strokeWidth="1.5"
+        android:strokeColor="#2563EB"/>
+    <path
+        android:pathData="M39,28H43"
+        android:strokeWidth="1.5"
+        android:strokeColor="#2563EB"/>
+    <path
+        android:pathData="M39,32H43"
+        android:strokeWidth="1.5"
+        android:strokeColor="#2563EB"/>
+    <!-- Base line -->
+    <path
+        android:pathData="M8,42H48"
+        android:strokeWidth="2"
+        android:strokeColor="#ffffff"/>
+    <!-- Insight symbol (eye/diamond) -->
+    <path
+        android:pathData="M28,6L32,10L28,14L24,10Z"
+        android:fillColor="#F59E0B"/>
+    <path
+        android:pathData="M26,10C26,8.895 26.895,8 28,8C29.105,8 30,8.895 30,9C30,10.105 29.105,12 28,12C26.895,12 26,11.105 26,10Z"
+        android:fillColor="#2563EB"/>
+  </group>
+</vector>

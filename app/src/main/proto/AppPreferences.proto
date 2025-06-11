@@ -1,0 +1,107 @@
+syntax = "proto3";
+
+import "google/protobuf/timestamp.proto";
+
+option java_package = "com.aigroup.aigroupmobile.data.models";
+option java_multiple_files = true;
+
+message AppPreferences {
+    message Token {
+        optional string generic = 1;
+        optional string dashscope = 2;
+        optional string moonshot = 3;
+        optional string stepfun = 4;
+        optional string baichuan = 5;
+        optional string aimass = 6;
+        optional string lingyiwanwu = 7;
+        optional string brain360 = 8;
+        optional string xunfei = 9;
+        optional string zhipu = 10;
+        optional string baidu = 11;
+        optional string openai = 12;
+        optional string anthropic = 13;
+        optional string google = 14;
+        optional string mistral = 15;
+        optional string perplexity = 16;
+        optional string groq = 17;
+        optional string deepseek = 18;
+        optional string openrouter = 19;
+    }
+
+    message ServiceToken {
+        optional string serper = 1;
+    }
+
+    message TokenConfig {
+        optional string api_base = 1;
+    }
+
+    message LongBotProperties {
+        optional double temperature = 1;
+        optional int32 max_tokens = 2;
+        optional double top_p = 3;
+        optional double presence_penalty = 4;
+        optional double frequency_penalty = 5;
+    }
+
+    message TimeoutConfig {
+        optional int32 connect_timeout_seconds = 1;
+        optional int32 request_timeout_seconds = 2;
+        optional int32 socket_timeout_seconds = 3;
+    }
+
+    enum ChatViewMode {
+        BUBBLE = 0;
+        DOCUMENT = 1;
+    }
+
+    enum ThemeMode {
+        SYSTEM = 0;
+        LIGHT = 1;
+        DARK = 2;
+    }
+
+    enum ColorScheme {
+        // 经典主题（默认）
+        CLASSIC = 0;
+        // 朴素主题
+        PLAIN = 1;
+        // 彩色主题
+        COLORFUL = 2;
+    }
+
+    // secrets
+    Token token = 1;
+    map<string, TokenConfig> token_config = 14; // TODO: 优化&迁移，这里缺失强类型
+    ServiceToken service_token = 11;
+
+    // llm
+    string default_model_code = 2;
+    LongBotProperties default_model_properties = 3;
+
+    // text-to-image
+    string default_image_model = 4;
+    string default_image_resolution = 5;
+    uint32 image_n = 10;
+
+    // text(or image)-to-video
+    string default_video_model = 13;
+
+    // voice service
+    string voice_code = 12;
+
+    // appearance
+    ChatViewMode chat_view_mode = 6;
+    ThemeMode ui_mode = 7;
+    ColorScheme color_scheme = 15;
+    bool using_android_dynamic_color = 16;
+
+    // data and privacy
+    google.protobuf.Timestamp last_data_backup = 8;
+
+    // app version
+    optional uint32 initialized_version = 9;
+
+    // network timeout configuration
+    TimeoutConfig timeout_config = 17;
+}

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths>
+    <cache-path name="temp_media" path="medias/" />
+    <cache-path name="generic_media" path="others/" />
+    <cache-path name="share_content" path="share/" />
+</paths>

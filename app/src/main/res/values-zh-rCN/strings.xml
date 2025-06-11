@@ -1,0 +1,415 @@
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="lang_code">zh-CN</string>
+
+    <string name="app_name">AI Group</string>
+    <string name="scan_qr_code_overlay">扫描二维码</string>
+    <string name="app_version_label">Version 1.0.0</string>
+    <string name="general_close">关闭</string>
+
+    <string name="label_menu_set_session_title">设置会话标题</string>
+    <string name="label_button_summary_session">总结会话</string>
+    <string name="label_session_settings">会话设置</string>
+    <string name="label_delete_session">删除会话</string>
+    <string name="hint_session_title">会话标题</string>
+
+    <string name="label_cancel">取消</string>
+    <string name="label_confirm">确认</string>
+    <string name="hint_placeholder_chat_bottom_bar">有问题尽管问我!</string>
+
+    <string name="label_confirm_delete_session">要删除该会话内容吗, 该操作不可恢复!</string>
+    <string name="label_llm_model">模型</string>
+    <string name="label_play_camera">拍摄</string>
+    <string name="label_plugin">插件</string>
+    <string name="label_llm_props">参数</string>
+    <string name="label_llm_context">上下文</string>
+
+    <string name="toast_save_success">保存成功</string>
+    <string name="toast_save_fail">保存失败</string>
+    <string name="toast_copied">已复制到剪贴板</string>
+
+    <string name="label_share_to">分享到</string>
+    <string name="label_loading">加载中</string>
+
+    <string name="label_bot_greeting_prompt">
+        <xliff:g id="time_period" example="早上">%1$s</xliff:g>好, 有什么需要我帮忙的吗?
+    </string>
+    <string name="label_ask_me_prompt">问问我什么?</string>
+    <string name="label_select_other_llm_label">选择其他模型</string>
+    <string name="label_upload_media">上传多媒体内容</string>
+    <string name="label_talking">语音输入中</string>
+    <string name="label_start_talk">开始语音输入</string>
+    <string name="label_last_chat_about">上次聊到</string>
+
+    <string name="label_menu_copy">复制</string>
+    <string name="label_menu_tts">文字转语音</string>
+    <string name="label_menu_regenerate">重新生成</string>
+    <string name="label_menu_plugin_generated">由%1$s插件生成</string>
+    <string name="label_menu_edit_msg">编辑消息</string>
+
+    <string name="label_pinned_sessions">置顶会话</string>
+    <string name="label_unpinned_sessions">取消置顶</string>
+    <string name="label_button_create_session">新建对话</string>
+
+    <string name="label_llm_model_props_setting">模型参数设置</string>
+    <string name="label_button_reset_llm_props">重置参数</string>
+    <string name="label_button_reset_llm_prop_default_value">重置为默认值</string>
+
+    <string name="label_llm_prop_temp">温度</string>
+    <string name="label_llm_prop_top_p">核采样</string>
+    <string name="label_llm_prop_presence_penalty">话题新鲜度</string>
+    <string name="label_llm_prop_frequency_penalty">频率惩罚度</string>
+
+    <string name="chat_provider_desc_official">可用 gpt-4o, gemini, claude3.5 以及 dall-e 等</string>
+    <string name="chat_provider_desc_openai">OpenAI 官方 API, 可用 GPT-3.5,GPT-4, gpt-4o 等模型</string>
+    <string name="chat_provider_desc_anthropic">可用 Claude 3.5 等模型</string>
+    <string name="chat_provider_desc_google">可用 Google Gemini 1.5 等模型</string>
+    <string name="chat_provider_desc_mistral">可用 Mistral AI 大模型</string>
+    <string name="chat_provider_desc_perplexity">可用 Perplexity AI 大模型</string>
+    <string name="chat_provider_desc_groq">可用 Groq 平台 Gemma, Llama 等大模型</string>
+    <string name="chat_provider_desc_moonshot">可使用 Kimi AI 模型</string>
+    <string name="chat_provider_desc_dashscope">可用通义千问模型, 支持视频输入，支持通义万相图片生成</string>
+    <string name="chat_provider_desc_stepfun">可用阶跃星辰大模型以及图像生成大模型</string>
+    <string name="chat_provider_desc_baichuan">可用百川大模型</string>
+    <string name="chat_provider_desc_aimass">可用太初大模型</string>
+    <string name="chat_provider_desc_lingyiwanwu">可用Yi系列大模型</string>
+    <string name="chat_provider_desc_brain360">可用360智脑 360gpt2-pro 等大模型以及图像生成大模型</string>
+    <string name="chat_provider_desc_xunfei">可用讯飞星火大模型以及图像生成大模型</string>
+    <string name="chat_provider_desc_zhipu">可用智谱清言 GLM 大模型以及 cogView 图像大模型</string>
+    <string name="chat_provider_desc_baidu">百度智能云AI，可用文心一言大模型</string>
+
+    <string name="chat_provider_name_official">AiHubMix</string>
+    <string name="chat_provider_name_moonshot">Kimi AI</string>
+    <string name="chat_provider_name_dashscope">阿里 DashScope</string>
+    <string name="chat_provider_name_stepfun">阶跃星辰</string>
+    <string name="chat_provider_name_baichuan">百川</string>
+    <string name="chat_provider_name_aimass">紫东太初</string>
+    <string name="chat_provider_name_lingyiwanwu">零一万物</string>
+    <string name="chat_provider_name_brain360">360智脑</string>
+    <string name="chat_provider_name_xunfei">讯飞</string>
+    <string name="chat_provider_name_zhipu">智谱清言</string>
+    <string name="chat_provider_name_baidu">百度智能云</string>
+    <string name="chat_provider_name_openai">OpenAI</string>
+    <string name="chat_provider_name_anthropic">Anthropic</string>
+    <string name="chat_provider_name_google">Google</string>
+    <string name="chat_provider_name_mistral">Mistral</string>
+    <string name="chat_provider_name_perplexity">Perplexity</string>
+    <string name="chat_provider_name_groq">Groq</string>
+
+    <string name="label_set_chat_service_token">设置 Token</string>
+    <string name="label_chat_service_enable">已启用服务</string>
+    <string name="label_chat_service_available">可用服务</string>
+
+    <string name="label_session_history">历史记录</string>
+    <string name="hint_placeholder_search_session">搜索聊天内容</string>
+
+    <string name="label_session_filter_all">全部</string>
+    <string name="label_session_filter_today">今天</string>
+    <string name="label_session_filter_yesterday">昨天</string>
+    <string name="label_session_filter_earlier">更早</string>
+
+    <string name="label_menu_create_session_clone">创建拷贝</string>
+
+    <string name="label_desc_set_llm_context">设置单次发送最大包含的上下文消息数量</string>
+    <string name="label_no_limit_llm_context">不限制</string>
+
+    <string name="label_gallery">相册</string>
+    <string name="label_gallery_full">从相册选择</string>
+    <string name="label_take_photo">拍摄</string>
+    <string name="label_take_photo_full">从相机拍照</string>
+    <string name="label_take_video">录像</string>
+    <string name="label_take_video_full">录制视频</string>
+
+    <string name="label_guess_question_for_media_prompt">猜你想问:</string>
+
+    <string name="label_image_provider_name_official">AiHubMix</string>
+    <string name="label_image_provider_name_cogview">智谱</string>
+    <string name="label_image_provider_name_brain360">360智脑</string>
+    <string name="label_image_provider_name_qwen">通义万相</string>
+    <string name="label_image_provider_name_stepfun">阶跃星辰</string>
+
+    <string name="label_menu_regenerate_image">重新生成</string>
+    <string name="toast_regenerate_image_fail">重新生成失败</string>
+    <string name="label_plugin_name_text_to_image">文生图</string>
+    <string name="label_image_generated_by">%1$s 生成</string>
+    <string name="label_message_chat_readable_text_image">[图片内容] %1$s</string>
+    <string name="label_message_chat_readable_text_video">[视频内容] %1$s</string>
+
+    <string name="label_micro_button_interaction_guide">松开发送,上划取消</string>
+    <string name="label_micro_button_release_cancel">松开取消</string>
+    <string name="label_micro_button_recognizing">识别中…</string>
+    <string name="label_micro_button_hold_to_speak">按住说话</string>
+
+    <string name="label_llm_model_custom_group_desc_simple">其他模型 %1$s</string>
+    <string name="label_llm_model_group_desc_simple">来自 %1$s 的 %2$s 模型</string>
+
+    <string name="label_select_llm_model">选择模型</string>
+    <string name="hint_placeholder_search_llm_model">搜索模型</string>
+    <string name="label_stared_llm_model">收藏模型</string>
+    <string name="label_model_load_fail">加载失败: %1$s</string>
+    <string name="label_llm_popup_current_selected">当前选择</string>
+
+    <string name="hint_placeholder_textfield_default">请输入…</string>
+
+    <string name="label_user_profile">个人资料</string>
+    <string name="label_button_edit_username">更改用户名</string>
+    <string name="hint_new_username">新用户名</string>
+    <string name="label_button_select_avatar">重新选择头像</string>
+    <string name="label_button_restore_avatar">恢复默认头像</string>
+    <string name="label_llm_prop_desc_temp">温度越高，生成的文本越具有创造性</string>
+    <string name="label_llm_prop_desc_top_p">核采样, 与随机性类似，但不要和随机性一起更改</string>
+    <string name="label_llm_prop_desc_presence_penalty">话题新鲜度, 值越大，越有可能扩展到新话题</string>
+    <string name="label_llm_prop_desc_frequency_penalty">频率惩罚度, 值越大，越有可能降低重复字词</string>
+    <string name="label_plugin_name_serper_search">在线搜索</string>
+
+    <string name="label_session_settings_chatbot">聊天机器人 %1$s</string>
+    <string name="label_chatbot_come_from">来自%1$s</string>
+    <string name="label_chatbot_created_at">创建于 %1$s</string>
+
+    <string name="toast_already_latest_version">已经是最新版本</string>
+    <string name="toast_cache_cleared">缓存已经清理</string>
+    <string name="toast_data_cleared">本地数据已经清理</string>
+
+    <string name="label_settings_general">通用</string>
+    <string name="label_settings_tts">语音服务设置</string>
+    <string name="label_settings_tts_service_provider">语音合成服务</string>
+    <string name="label_settings_tts_timbre">音色选择</string>
+    <string name="label_settings_tts_test">试音</string>
+    <string name="label_settings_backup_created_at">%1$s备份</string>
+    <string name="label_settings_backup_no_backup">无备份</string>
+    <string name="label_settings_chat_token">Token 设置</string>
+    <string name="label_settings_custom_llm_providers">自定义 LLM 提供商</string>
+    <string name="label_settings_llm_model_default">默认聊天模型</string>
+    <string name="label_settings_llm_props_default">默认聊天参数</string>
+    <string name="label_settings_text2img">图像生成</string>
+    <string name="label_settings_text2img_service_provider">文生图服务</string>
+    <string name="label_settings_text2img_model">文生图模型</string>
+    <string name="label_settings_text2img_resolution">文生图质量</string>
+    <string name="label_settings_text2img_number">文生图数量</string>
+    <string name="label_settings_text2video">视频生成</string>
+    <string name="label_settings_text2video_model">视频生成模型</string>
+    <string name="label_settings_search_online">在线搜索</string>
+    <string name="label_settings_serper_service">Serper 搜索服务</string>
+    <string name="label_settings_item_already_set">已启用</string>
+    <string name="label_settings_item_not_set">未设置</string>
+    <string name="label_settings_appearance">外观</string>
+    <string name="label_settings_chat_detail_page_mode">聊天页面模式</string>
+    <string name="label_settings_app_theme">App 主题</string>
+    <string name="label_settings_privacy_data">隐私和数据</string>
+    <string name="label_settings_backup_data">数据备份</string>
+    <string name="label_settings_clear_cache">清除缓存</string>
+    <string name="label_settings_clear_data">清除本地数据</string>
+    <string name="label_settings_others">其他</string>
+    <string name="label_settings_check_update">检查更新</string>
+    <string name="label_settings_current_version">当前版本 %1$s</string>
+    <string name="label_settings_about">关于 %1$s</string>
+    <string name="label_settings_share">分享 %1$s</string>
+    <string name="label_settings_app_language">语言</string>
+    <string name="label_settings_lang_auto">跟随系统</string>
+
+    <string name="label_confirm_clear_cache">要清除 %1$sMB 的缓存吗?</string>
+    <string name="label_confirm_clear_data">要清楚所有本地数据吗? 这将无法恢复!</string>
+
+    <string name="label_theme_mode_follow_system">跟随系统</string>
+    <string name="label_theme_mode_bright">明亮</string>
+    <string name="label_theme_model_dark">暗黑</string>
+
+    <string name="label_chat_ui_mode_doc">文档模式</string>
+    <string name="label_chat_ui_mode_bubble">聊天气泡</string>
+
+    <string name="toast_token_cannot_empty">Token 不能为空</string>
+    <string name="label_menu_input_app_token">输入 Token</string>
+    <string name="label_menu_qrcode_app_token">扫描二维码</string>
+    <string name="label_menu_qrcode_gallery_app_token">从图片识别二维码</string>
+    <string name="hint_input_app_token">Token</string>
+
+    <string name="label_service_setup">设置 %1$s</string>
+    <string name="label_service_setup_basic_info">基本信息</string>
+    <string name="label_service_setup_set_token">Token 设置</string>
+    <string name="hint_service_setup_token">%1$s 的 Token</string>
+    <string name="label_button_service_setup_official_site">前往 %1$s 官方网站</string>
+
+    <string name="label_plugin_name_video_generation">视频生成</string>
+    <string name="label_video_generated_by">%1$s 生成</string>
+
+    <string name="video_generation_service_provider_cogviewx">智谱 CogViewX</string>
+
+    <string name="tts_service_provider_azure">Azure 语音服务</string>
+    <string name="tts_service_provider_tts_1">OpenAI tts-1</string>
+    <string name="tts_service_provider_tts_1_hd">OpenAI tts-1-hd</string>
+
+    <string name="label_welcome_greeting_to_user">你好, %1$s</string>
+    <string name="label_welcome_ask_for_custom_avatar">自定义一个头像吗?</string>
+    <string name="label_welcome_button_continue">继续</string>
+    <string name="label_welcome_greeting">"欢迎来到"</string>
+    <string name="label_welcome_init_app_desc">让我们用简单几步完成初始化</string>
+    <string name="label_welcome_button_start">开始</string>
+    <string name="label_welcome_select_llm_model">选择一个默认聊天模型</string>
+    <string name="label_welcome_select_llm_model_desc">选一个喜欢的模型，稍后可在设置中更改或选择更多</string>
+    <string name="label_welcome_setup_username">设置你的用户名</string>
+    <string name="label_welcome_setup_username_desc">智能体和助手机器人将记住你的名字</string>
+    <string name="hint_welcome_placeholder_setup_username">输入用户名</string>
+
+    <string name="label_settings_sessions_count">聊天会话</string>
+    <string name="label_settings_commonly_llm_model">常用模型</string>
+    <string name="label_settings_no_commonly_llm_model">暂无</string>
+    <string name="label_settings_my_media_content">我的媒体内容</string>
+    <string name="label_settings_media_content_empty">目前没有媒体, 快去聊天中上传图片吧~</string>
+    <string name="toast_add_remove_config_success">添加配置成功</string>
+    <string name="toast_add_remove_config_fail">添加配置失败: %1$s</string>
+    <string name="label_settings_add_remote_config">添加配置</string>
+    <string name="label_settings_confirm_add_remote_config">你确定要添加该配置吗? 这将覆盖你的本地配置。</string>
+    <string name="label_guide_question_1">🎉 支持哪些聊天模型?</string>
+    <string name="label_guide_question_2">🦈 讲个英雄鲨鱼的故事</string>
+    <string name="label_guide_question_3">🖼️ 画一张小猫的图片</string>
+    <string name="label_guide_question_4">📐 解答这道数学题目</string>
+    <string name="label_guide_question_5">🏋️ 帮我做一下健身计划</string>
+    <string name="label_guide_question_6">🎬 推荐一部每日电影</string>
+    <string name="label_tts_text_text">你好，我是你的专属 AI 助手</string>
+
+    <string name="label_guide_question_1_answer">
+        你好! 欢迎来到 AIGroup! \n\n
+
+        AIGroup 支持 gpt-4o, o1-preview 在内所有 OpenAI 模型, 同时支持 Gemini,
+        Claude, 通义千问 在内的众多大厂模型，也支持 Llama 等开源模型。\n\n
+
+        AIGroup 还支持**图像分析**和**视频分析**, 你可以尝试点击右下角的按钮来添加附件。\n\n
+
+        如果你还有其他问题，或者需要更多帮助，请随时告诉我！
+    </string>
+
+    <string name="label_guess_question_for_video_1">视频里面有什么?</string>
+    <string name="label_guess_question_for_video_2">概括视频主要内容</string>
+    <string name="label_guess_question_for_image_1">图片里面有什么</string>
+    <string name="label_guess_question_for_image_2">为图片内容写一首诗</string>
+    <string name="label_guess_question_for_media_1">你能描述一下这个嘛?</string>
+    <string name="label_guess_question_for_media_2">帮我生成一个朋友圈文案</string>
+    <string name="label_guess_question_for_media_3">评价一下拍摄技术!</string>
+    <string name="llm_model_group_openai">OpenAI</string>
+    <string name="llm_model_group_gemini">Google</string>
+    <string name="llm_model_group_qwen">通义千问</string>
+    <string name="llm_model_group_claude">Anthropic</string>
+    <string name="llm_model_group_llama">Llama家族</string>
+    <string name="llm_model_group_glm">智谱清言</string>
+    <string name="llm_model_group_moonshot">Moonshot</string>
+    <string name="llm_model_group_stepfun">step</string>
+    <string name="llm_model_group_baichuan">baichuan</string>
+    <string name="llm_model_group_taichu">taichu</string>
+    <string name="llm_model_group_lingyiwanw">Yi系列</string>
+    <string name="llm_model_group_brain360">360 Gpt</string>
+    <string name="llm_model_group_spark">讯飞星火</string>
+    <string name="llm_model_group_ernie">文心一言</string>
+    <string name="llm_model_group_mistral">Mistral</string>
+    <string name="llm_model_group_perplexity">Perplexity</string>
+    <string name="llm_model_group_groq">Groq</string>
+    <string name="llm_model_group_gemma">Gemma</string>
+    <string name="llm_model_group_llava">LlaVA</string>
+
+    <string name="label_untitled_chat">新的会话</string>
+
+    <string name="label_service_usage_serper">"设置 Serper 来使用在线 Google 搜索和访问网页等服务"</string>
+
+    <string name="label_prompt_example_online_search">根据搜索结果，2021年的诺贝尔奖得主是Maria Ressa。</string>
+
+    <string name="chat_message_video_generation_working">正在根据\"%1$s\"生成视频, 可能需要一些时间处理，请稍后来查看。</string>
+    <string name="chat_message_video_generation_generated_message">这是我根据要求生成的视频</string>
+    <string name="chat_message_video_generation_generated_message_with_prompt">这是我根据\"%1$s\"生成的视频</string>
+    <string name="chat_message_text2img_generated">这是我根据\"%1$s\"生成的图片</string>
+
+    <string name="label_chat_message_error_template">抱歉, 发生了错误, 请稍后再试 (%1$s)</string>
+    <string name="label_chat_message_url_processing_info">消息包含链接内容，已成功接收但可能无法完全处理所有链接功能</string>
+
+    <string name="label_datetime_just_now">刚刚</string>
+    <string name="label_date_time_today">今天</string>
+    <string name="label_date_time_yesterday">昨天</string>
+    <string name="label_date_time_two_days_ago">前天</string>
+    <string name="label_date_time_dawn">早上</string>
+    <string name="label_date_time_morning">上午</string>
+    <string name="label_date_time_noon">中午</string>
+    <string name="label_date_time_afternoon">下午</string>
+    <string name="label_date_time_evening">晚上</string>
+    <plurals name="label_date_time_min_ago">
+        <item quantity="other">%d分钟前</item>
+    </plurals>
+
+    <string name="label_user_join_at">
+        <xliff:g id="time" example="2022-01-01">%1$s</xliff:g> 加入
+    </string>
+    <string name="label_settings_color_scheme">配色方案</string>
+    <string name="label_color_scheme_plain">朴素</string>
+    <string name="label_color_scheme_classic">经典</string>
+    <string name="label_color_scheme_colorful">多彩</string>
+    <string name="label_settings_using_dynamic_color">使用动态颜色</string>
+    <string name="label_settings_desc_using_dynamic_color">通过 Android 莫奈取色在某些元素中使用你壁纸上的颜色</string>
+    <string name="tts_service_provider_system">系统语音服务</string>
+    <string name="label_failed_to_load_models_for_provider">加载模型失败</string>
+    <string name="label_error_no_token_set_for_provider">没有为 %1$s 设置令牌</string>
+    <string name="label_button_copy_error_message">复制报错</string>
+    <string name="label_button_retry_on_error">重试</string>
+    <string name="label_description_favorite_model">加入收藏的模型可以在聊天界面快速访问</string>
+    <string name="label_settings_clear_cookie">清楚 Cookie</string>
+    <string name="label_menu_translate">翻译</string>
+    <string name="label_unknown_error_message">未知错误</string>
+    <string name="label_assistants_store_title">助手</string>
+    <string name="hint_placeholder_search_assistants">搜索助手</string>
+    <string name="label_assistants">助手</string>
+    <string name="label_button_assistant_store">助手商店</string>
+    <string name="label_toast_assistant_deleted">已经删除助手</string>
+    <string name="label_toast_assistant_added">成功添加助手到本地</string>
+    <string name="label_delete_assistant">删除助手</string>
+    <string name="label_confirm_delete_assistant">你确定要删除助手吗</string>
+    <string name="label_assistant_settings">助手设置</string>
+    <string name="label_more_bot_sender">另外 %1$s 个机器人</string>
+    <string name="label_assistant_related_conversation">相关会话</string>
+    <string name="label_assistant_role">助手角色</string>
+    <string name="label_bot_greeting_prompt_assistant">我是 %1$s，你可以问我任何事情!</string>
+    <string name="label_assistants_store">助手商店</string>
+    <string name="label_try_assistant_store_prefix">尝试我们新推出的</string>
+    <string name="label_settings_assistants">助手</string>
+    <string name="label_changed_chat_model_for_assistant">"成功更新助手 %2$s 的模型为 %1$s "</string>
+    <string name="label_changed_chat_model">成功更新模型为 %1$s</string>
+    <string name="label_button_start_chat_assistant">开始聊天</string>
+
+    <plurals name="label_assistant_conversations_count">
+        <item quantity="other">%d 个会话</item>
+    </plurals>
+    <string name="label_message_chat_readable_text_doc">[文档内容] %1$s</string>
+
+    <!-- Custom LLM Provider strings -->
+    <string name="label_custom_llm_provider_add">添加提供商</string>
+    <string name="label_custom_llm_provider_edit">编辑提供商</string>
+    <string name="label_custom_llm_provider_delete">删除提供商</string>
+    <string name="label_custom_llm_provider_delete_confirm">确定要删除此提供商吗？此操作无法撤销，并将删除所有关联的模型。</string>
+    <string name="label_custom_llm_provider_details">提供商详情</string>
+    <string name="label_custom_llm_provider_name">提供商名称</string>
+    <string name="label_custom_llm_provider_api_base">API 基础 URL</string>
+    <string name="label_custom_llm_provider_requires_api_key">需要 API 密钥</string>
+    <string name="label_custom_llm_provider_api_key">API 密钥</string>
+    <string name="label_custom_llm_provider_enabled">已启用</string>
+    <string name="label_custom_llm_provider_update">更新提供商</string>
+    
+    <!-- Custom LLM Model strings -->
+    <string name="label_custom_llm_models">模型</string>
+    <string name="label_custom_llm_model_add">添加模型</string>
+    <string name="label_custom_llm_model_edit">编辑模型</string>
+    <string name="label_custom_llm_model_delete">删除模型</string>
+    <string name="label_custom_llm_model_delete_confirm">确定要删除此模型吗？此操作无法撤销。</string>
+    <string name="label_custom_llm_model_add_first">添加您的第一个模型</string>
+    <string name="label_custom_llm_model_add_first_desc">点击 + 按钮添加新模型</string>
+    <string name="label_custom_llm_model_information">模型信息</string>
+    <string name="label_custom_llm_model_id">模型 ID</string>
+    <string name="label_custom_llm_model_name">模型名称（可选）</string>
+    <string name="label_custom_llm_model_context_size">上下文大小（tokens）</string>
+    <string name="label_custom_llm_model_capabilities">功能</string>
+    <string name="label_custom_llm_model_supports_images">支持图像</string>
+    <string name="label_custom_llm_model_supports_images_desc">模型可以处理和理解图像</string>
+    <string name="label_custom_llm_model_supports_video">支持视频</string>
+    <string name="label_custom_llm_model_supports_video_desc">模型可以处理和理解视频</string>
+    <string name="label_custom_llm_model_supports_streaming">支持流式传输</string>
+    <string name="label_custom_llm_model_supports_streaming_desc">模型可以实时流式传输响应</string>
+    <string name="label_custom_llm_model_update">更新模型</string>
+    <string name="label_custom_llm_model_id_empty">模型 ID 不能为空</string>
+    <string name="label_discard_changes">放弃更改</string>
+    <string name="label_discard_changes_confirm">确定要放弃您的更改吗？</string>
+    <string name="label_discard">放弃</string>
+
+</resources>

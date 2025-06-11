@@ -1,0 +1,81 @@
+{
+  "_note1": "KEEP THIS FILE! Check it into a version control system (VCS) like git.",
+  "_note2": "ObjectBox manages crucial IDs for your object model. See docs for details.",
+  "_note3": "If you have VCS merge conflicts, you must resolve them according to ObjectBox docs.",
+  "entities": [
+    {
+      "id": "1:7822290205994274675",
+      "lastPropertyId": "3:876668064942399362",
+      "name": "KnowledgeDocument",
+      "properties": [
+        {
+          "id": "1:1110020986330992227",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:1364927004762085371",
+          "name": "title",
+          "type": 9
+        },
+        {
+          "id": "3:876668064942399362",
+          "name": "metadata",
+          "type": 13
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "2:5279056770531627006",
+      "lastPropertyId": "5:4077663208822085602",
+      "name": "KnowledgeChunk",
+      "properties": [
+        {
+          "id": "1:9129523117905985006",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:8616947433452750842",
+          "name": "documentId",
+          "indexId": "1:2841580123782931588",
+          "type": 11,
+          "flags": 520,
+          "relationTarget": "KnowledgeDocument"
+        },
+        {
+          "id": "3:7451093416679505389",
+          "name": "textContent",
+          "type": 9
+        },
+        {
+          "id": "4:7563356761918257198",
+          "name": "embedding",
+          "indexId": "2:35689617309304067",
+          "type": 28,
+          "flags": 8
+        },
+        {
+          "id": "5:4077663208822085602",
+          "name": "metadata",
+          "type": 13
+        }
+      ],
+      "relations": []
+    }
+  ],
+  "lastEntityId": "2:5279056770531627006",
+  "lastIndexId": "2:35689617309304067",
+  "lastRelationId": "0:0",
+  "lastSequenceId": "0:0",
+  "modelVersion": 5,
+  "modelVersionParserMinimum": 5,
+  "retiredEntityUids": [],
+  "retiredIndexUids": [],
+  "retiredPropertyUids": [],
+  "retiredRelationUids": [],
+  "version": 1
+}

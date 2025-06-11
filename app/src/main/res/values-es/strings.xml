@@ -1,0 +1,334 @@
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="lang_code">es</string>
+
+    <string name="app_name">Grupo IA</string>
+    <string name="scan_qr_code_overlay">Escanear código QR</string>
+    <string name="app_version_label">Versión 1.0.0</string>
+    <string name="general_close">Cerrar</string>
+
+    <string name="label_menu_set_session_title">Establecer título de conversación</string>
+    <string name="label_button_summary_session">Resumir conversación</string>
+    <string name="label_session_settings">Ajustes de conversación</string>
+    <string name="label_delete_session">Eliminar conversación</string>
+    <string name="hint_session_title">Título de la conversación</string>
+
+    <string name="label_cancel">Cancelar</string>
+    <string name="label_confirm">Confirmar</string>
+    <string name="hint_placeholder_chat_bottom_bar">¡No dudes en preguntarme cualquier cosa!</string>
+
+    <string name="label_confirm_delete_session">¿Estás seguro de que quieres eliminar esta conversación? ¡Esta acción no se puede deshacer!</string>
+    <string name="label_llm_model">Modelo</string>
+    <string name="label_play_camera">Sacar foto</string>
+    <string name="label_plugin">Plugin</string>
+    <string name="label_llm_props">Parámetros</string>
+    <string name="label_llm_context">Contexto</string>
+
+    <string name="toast_save_success">Guardado correctamente</string>
+    <string name="toast_save_fail">Error al guardar</string>
+    <string name="toast_copied">Copiado al portapapeles</string>
+
+    <string name="label_share_to">Compartir en</string>
+    <string name="label_loading">Cargando</string>
+
+    <string name="label_bot_greeting_prompt">Buenos <xliff:g id="time_period" example="días">%1$s</xliff:g>, ¿hay algo en lo que pueda ayudarte?</string>
+    <string name="label_ask_me_prompt">¿Qué te gustaría preguntarme?</string>
+    <string name="label_select_other_llm_label">Elegir otro modelo</string>
+    <string name="label_upload_media">Subir contenido multimedia</string>
+    <string name="label_talking">Entrada de voz en progreso</string>
+    <string name="label_start_talk">Iniciar entrada de voz</string>
+    <string name="label_last_chat_about">La última vez hablamos de</string>
+
+    <string name="label_menu_copy">Copiar</string>
+    <string name="label_menu_tts">Texto a voz</string>
+    <string name="label_menu_regenerate">Regenerar</string>
+    <string name="label_menu_plugin_generated">Generado por el plugin %1$s</string>
+    <string name="label_menu_edit_msg">Editar mensaje</string>
+
+    <string name="label_pinned_sessions">Conversaciones ancladas</string>
+    <string name="label_unpinned_sessions">Desanclar</string>
+    <string name="label_button_create_session">Iniciar nueva conversación</string>
+
+    <string name="label_llm_model_props_setting">Parámetros del modelo</string>
+    <string name="label_button_reset_llm_props">Restablecer parámetros</string>
+    <string name="label_button_reset_llm_prop_default_value">Restablecer valores predeterminados</string>
+
+    <string name="label_llm_prop_temp">Temperatura</string>
+    <string name="label_llm_prop_top_p">Top P</string>
+    <string name="label_llm_prop_presence_penalty">Penalización de presencia</string>
+    <string name="label_llm_prop_frequency_penalty">Penalización de frecuencia</string>
+
+    <string name="chat_provider_desc_official">Disponibles GPT-4o, Gemini, Claude 3.5, DALL·E, etc.</string>
+    <string name="chat_provider_desc_openai">API oficial de OpenAI, modelos disponibles incluyen GPT-3.5, GPT-4, GPT-4o, etc.</string>
+    <string name="chat_provider_desc_anthropic">Modelos disponibles como Claude 3.5</string>
+    <string name="chat_provider_desc_google">Modelos disponibles como Google Gemini 1.5</string>
+    <string name="chat_provider_desc_mistral">Modelos grandes de Mistral AI disponibles</string>
+    <string name="chat_provider_desc_perplexity">Modelos grandes de Perplexity AI disponibles</string>
+    <string name="chat_provider_desc_groq">Modelos grandes de la plataforma Groq disponibles como Gemma, Llama, etc.</string>
+    <string name="chat_provider_desc_moonshot">Modelos Kimi AI disponibles</string>
+    <string name="chat_provider_desc_dashscope">Modelos Tongyi Qianwen disponibles, admite entrada de vídeo y generación de imágenes Tongyi Wanxiang</string>
+    <string name="chat_provider_desc_stepfun">Modelos grandes y modelos grandes de generación de imágenes Stepfun disponibles</string>
+    <string name="chat_provider_desc_baichuan">Modelos grandes Baichuan disponibles</string>
+    <string name="chat_provider_desc_aimass">Modelos grandes Taichu disponibles</string>
+    <string name="chat_provider_desc_lingyiwanwu">Modelos grandes de la serie Yi disponibles</string>
+    <string name="chat_provider_desc_brain360">Modelos grandes disponibles como 360 Brain 360gpt2-pro y otros, y modelos grandes de generación de imágenes</string>
+    <string name="chat_provider_desc_xunfei">Modelos grandes iFLYTEK Spark y modelos grandes de generación de imágenes disponibles</string>
+    <string name="chat_provider_desc_zhipu">Modelos grandes Zhipu Qingyan GLM y modelos grandes de imágenes cogView disponibles</string>
+    <string name="chat_provider_desc_baidu">Baidu AI Cloud, modelos grandes Wenxin Yiyan disponibles</string>
+
+    <string name="chat_provider_name_official">Oficial</string>
+    <string name="chat_provider_name_moonshot">Kimi AI</string>
+    <string name="chat_provider_name_dashscope">Alibaba DashScope</string>
+    <string name="chat_provider_name_stepfun">Stepfun</string>
+    <string name="chat_provider_name_baichuan">Baichuan</string>
+    <string name="chat_provider_name_aimass">Taichu</string>
+    <string name="chat_provider_name_lingyiwanwu">Lingyi Wanwu</string>
+    <string name="chat_provider_name_brain360">360 Brain</string>
+    <string name="chat_provider_name_xunfei">iFLYTEK</string>
+    <string name="chat_provider_name_zhipu">Zhipu Qingyan</string>
+    <string name="chat_provider_name_baidu">Baidu AI Cloud</string>
+    <string name="chat_provider_name_openai">OpenAI</string>
+    <string name="chat_provider_name_anthropic">Anthropic</string>
+    <string name="chat_provider_name_google">Google</string>
+    <string name="chat_provider_name_mistral">Mistral</string>
+    <string name="chat_provider_name_perplexity">Perplexity</string>
+    <string name="chat_provider_name_groq">Groq</string>
+
+    <string name="label_set_chat_service_token">Establecer token</string>
+    <string name="label_chat_service_enable">Servicio habilitado</string>
+    <string name="label_chat_service_available">Servicios disponibles</string>
+
+    <string name="label_session_history">Historial</string>
+    <string name="hint_placeholder_search_session">Buscar contenido de chat</string>
+
+    <string name="label_session_filter_all">Todo</string>
+    <string name="label_session_filter_today">Hoy</string>
+    <string name="label_session_filter_yesterday">Ayer</string>
+    <string name="label_session_filter_earlier">Anterior</string>
+
+    <string name="label_menu_create_session_clone">Crear copia</string>
+
+    <string name="label_desc_set_llm_context">Establece el número máximo de mensajes de contexto incluidos en un solo envío</string>
+    <string name="label_no_limit_llm_context">Sin límite</string>
+
+    <string name="label_gallery">Galería</string>
+    <string name="label_gallery_full">Seleccionar de la galería</string>
+    <string name="label_take_photo">Sacar foto</string>
+    <string name="label_take_photo_full">Sacar foto con la cámara</string>
+    <string name="label_take_video">Grabar vídeo</string>
+    <string name="label_take_video_full">Grabar vídeo</string>
+
+    <string name="label_guess_question_for_media_prompt">Quizás quieras preguntar:</string>
+
+    <string name="label_image_provider_name_official">Oficial</string>
+    <string name="label_image_provider_name_cogview">Zhipu</string>
+    <string name="label_image_provider_name_brain360">360 Brain</string>
+    <string name="label_image_provider_name_qwen">Tongyi Wanxiang</string>
+    <string name="label_image_provider_name_stepfun">Stepfun</string>
+
+    <string name="label_menu_regenerate_image">Regenerar</string>
+    <string name="toast_regenerate_image_fail">Error al regenerar</string>
+    <string name="label_plugin_name_text_to_image">Texto a imagen</string>
+    <string name="label_image_generated_by">Generado por %1$s</string>
+    <string name="label_message_chat_readable_text_image">[Contenido de la imagen] %1$s</string>
+    <string name="label_message_chat_readable_text_video">[Contenido del vídeo] %1$s</string>
+
+    <string name="label_micro_button_interaction_guide">Suelta para enviar, desliza hacia arriba para cancelar</string>
+    <string name="label_micro_button_release_cancel">Suelta para cancelar</string>
+    <string name="label_micro_button_recognizing">Reconociendo…</string>
+    <string name="label_micro_button_hold_to_speak">Mantén pulsado para hablar</string>
+
+    <string name="label_llm_model_custom_group_desc_simple">Otros modelos %1$s</string>
+    <string name="label_llm_model_group_desc_simple">Modelos %2$s de %1$s</string>
+
+    <string name="label_select_llm_model">Seleccionar modelo</string>
+    <string name="hint_placeholder_search_llm_model">Buscar modelo</string>
+    <string name="label_stared_llm_model">Modelos favoritos</string>
+    <string name="label_model_load_fail">Error al cargar: %1$s</string>
+    <string name="label_llm_popup_current_selected">Seleccionado actualmente</string>
+
+    <string name="hint_placeholder_textfield_default">Por favor, escribe...</string>
+
+    <string name="label_user_profile">Perfil</string>
+    <string name="label_button_edit_username">Cambiar nombre de usuario</string>
+    <string name="hint_new_username">Nuevo nombre de usuario</string>
+    <string name="label_button_select_avatar">Volver a seleccionar avatar</string>
+    <string name="label_button_restore_avatar">Restaurar avatar predeterminado</string>
+    <string name="label_llm_prop_desc_temp">Cuanto más alta sea la temperatura, más creativo será el texto generado</string>
+    <string name="label_llm_prop_desc_top_p">Muestreo Top P, similar a la aleatoriedad, pero evita cambiar ambos a la vez</string>
+    <string name="label_llm_prop_desc_presence_penalty">Penalización de presencia, valores más altos aumentan la probabilidad de explorar nuevos temas</string>
+    <string name="label_llm_prop_desc_frequency_penalty">Penalización de frecuencia, valores más altos reducen la probabilidad de repetir palabras</string>
+    <string name="label_plugin_name_serper_search">Búsqueda en línea</string>
+
+    <string name="label_session_settings_chatbot">Chatbot %1$s</string>
+    <string name="label_chatbot_come_from">De %1$s</string>
+    <string name="label_chatbot_created_at">Creado el %1$s</string>
+
+    <string name="toast_already_latest_version">Ya es la versión más reciente</string>
+    <string name="toast_cache_cleared">Caché borrada</string>
+    <string name="toast_data_cleared">Datos locales borrados</string>
+
+    <string name="label_settings_general">General</string>
+    <string name="label_settings_tts">Ajustes del servicio de voz</string>
+    <string name="label_settings_tts_service_provider">Servicio de síntesis de voz</string>
+    <string name="label_settings_tts_timbre">Selección de voz</string>
+    <string name="label_settings_tts_test">Probar voz</string>
+    <string name="label_settings_backup_created_at">Copia de seguridad del %1$s</string>
+    <string name="label_settings_backup_no_backup">Sin copia de seguridad</string>
+    <string name="label_settings_chat_token">Ajustes del token de chat</string>
+    <string name="label_settings_llm_model_default">Modelo de chat predeterminado</string>
+    <string name="label_settings_llm_props_default">Parámetros de chat predeterminados</string>
+    <string name="label_settings_text2img">Generación de imágenes</string>
+    <string name="label_settings_text2img_service_provider">Servicio de texto a imagen</string>
+    <string name="label_settings_text2img_model">Modelo de texto a imagen</string>
+    <string name="label_settings_text2img_resolution">Calidad de la imagen</string>
+    <string name="label_settings_text2img_number">Número de imágenes</string>
+    <string name="label_settings_text2video">Generación de vídeo</string>
+    <string name="label_settings_text2video_model">Modelo de generación de vídeo</string>
+    <string name="label_settings_search_online">Búsqueda en línea</string>
+    <string name="label_settings_serper_service">Servicio de búsqueda Serper</string>
+    <string name="label_settings_item_already_set">Habilitado</string>
+    <string name="label_settings_item_not_set">No configurado</string>
+    <string name="label_settings_appearance">Apariencia</string>
+    <string name="label_settings_chat_detail_page_mode">Modo de página de chat</string>
+    <string name="label_settings_app_theme">Tema de la aplicación</string>
+    <string name="label_settings_privacy_data">Privacidad y datos</string>
+    <string name="label_settings_backup_data">Copia de seguridad de datos</string>
+    <string name="label_settings_clear_cache">Borrar caché</string>
+    <string name="label_settings_clear_data">Borrar datos locales</string>
+    <string name="label_settings_others">Otros</string>
+    <string name="label_settings_check_update">Buscar actualizaciones</string>
+    <string name="label_settings_current_version">Versión actual %1$s</string>
+    <string name="label_settings_about">Acerca de %1$s</string>
+    <string name="label_settings_share">Compartir %1$s</string>
+    <string name="label_settings_app_language">Idioma</string>
+    <string name="label_settings_lang_auto">Seguir el sistema</string>
+
+    <string name="label_confirm_clear_cache">¿Borrar %1$s MB de caché?</string>
+    <string name="label_confirm_clear_data">¿Quieres borrar todos los datos locales? ¡Esta acción no se puede deshacer!</string>
+
+    <string name="label_theme_mode_follow_system">Seguir el sistema</string>
+    <string name="label_theme_mode_bright">Claro</string>
+    <string name="label_theme_model_dark">Oscuro</string>
+
+    <string name="label_chat_ui_mode_doc">Modo documento</string>
+    <string name="label_chat_ui_mode_bubble">Burbuja de chat</string>
+
+    <string name="toast_token_cannot_empty">El token no puede estar vacío</string>
+    <string name="label_menu_input_app_token">Introducir token</string>
+    <string name="label_menu_qrcode_app_token">Escanear código QR</string>
+    <string name="label_menu_qrcode_gallery_app_token">Reconocer código QR de la imagen</string>
+    <string name="hint_input_app_token">Token</string>
+
+    <string name="label_service_setup">Configurar %1$s</string>
+    <string name="label_service_setup_basic_info">Información básica</string>
+    <string name="label_service_setup_set_token">Ajustes del token</string>
+    <string name="hint_service_setup_token">Token para %1$s</string>
+    <string name="label_button_service_setup_official_site">Ir a la página web oficial de %1$s</string>
+
+    <string name="label_plugin_name_video_generation">Generación de vídeo</string>
+    <string name="label_video_generated_by">Generado por %1$s</string>
+
+    <string name="video_generation_service_provider_cogviewx">Zhipu CogViewX</string>
+
+    <string name="tts_service_provider_azure">Servicio de voz de Azure</string>
+    <string name="tts_service_provider_tts_1">OpenAI tts-1</string>
+    <string name="tts_service_provider_tts_1_hd">OpenAI tts-1-hd</string>
+
+    <string name="label_welcome_greeting_to_user">Hola, %1$s</string>
+    <string name="label_welcome_ask_for_custom_avatar">¿Te gustaría personalizar un avatar?</string>
+    <string name="label_welcome_button_continue">Continuar</string>
+    <string name="label_welcome_greeting">Bienvenido a</string>
+    <string name="label_welcome_init_app_desc">Vamos a completar la inicialización en unos pocos pasos sencillos</string>
+    <string name="label_welcome_button_start">Comenzar</string>
+    <string name="label_welcome_select_llm_model">Selecciona un modelo de chat predeterminado</string>
+    <string name="label_welcome_select_llm_model_desc">Elige un modelo que te guste; puedes cambiarlo o seleccionar más en los ajustes más tarde.</string>
+    <string name="label_welcome_setup_username">Configura tu nombre de usuario</string>
+    <string name="label_welcome_setup_username_desc">Los agentes y robots asistentes recordarán tu nombre</string>
+    <string name="hint_welcome_placeholder_setup_username">Introduce nombre de usuario</string>
+
+    <string name="label_settings_sessions_count">Sesiones de chat</string>
+    <string name="label_settings_commonly_llm_model">Frecuentemente usados</string>
+    <string name="label_settings_no_commonly_llm_model">Ninguno</string>
+    <string name="label_settings_my_media_content">Mi contenido multimedia</string>
+    <string name="label_settings_media_content_empty">Actualmente no hay multimedia; sube imágenes en el chat~</string>
+    <string name="toast_add_remove_config_success">Configuración añadida correctamente</string>
+    <string name="toast_add_remove_config_fail">Error al añadir la configuración: %1$s</string>
+    <string name="label_settings_add_remote_config">Añadir configuración</string>
+    <string name="label_settings_confirm_add_remote_config">¿Estás seguro de que quieres añadir esta configuración? Esto sobrescribirá tu configuración local.</string>
+    <string name="label_guide_question_1">🎉 ¿Qué modelos de chat son compatibles?</string>
+    <string name="label_guide_question_2">🦈 Cuenta una historia de un héroe tiburón</string>
+    <string name="label_guide_question_3">🖼️ Dibuja un gatito</string>
+    <string name="label_guide_question_4">📐 Resuelve este problema de matemáticas</string>
+    <string name="label_guide_question_5">🏋️ Ayúdame a hacer un plan</string>
+    <string name="label_guide_question_6">🎬 Recomienda una película para hoy</string>
+    <string name="label_tts_text_text">Hola, soy tu asistente personal de IA</string>
+
+    <string name="label_guide_question_1_answer">
+        ¡Hola! Bienvenido a AIGroup!\n\n
+
+        AIGroup admite todos los modelos de OpenAI, incluidos GPT-4o, o1-preview, y admite varios modelos de grandes empresas como Gemini, Claude, Tongyi Qianwen, y también admite modelos de código abierto como Llama.\n\n
+
+        AIGroup también admite el **análisis de imágenes** y el **análisis de vídeo**. Puedes intentar hacer clic en el botón de la esquina inferior derecha para agregar archivos adjuntos.\n\n
+
+        Si tienes alguna otra pregunta o necesitas más ayuda, ¡no dudes en hacérmelo saber!
+    </string>
+
+    <string name="label_guess_question_for_video_1">¿Qué hay en el vídeo?</string>
+    <string name="label_guess_question_for_video_2">Resume el contenido principal del vídeo</string>
+    <string name="label_guess_question_for_image_1">¿Qué hay en la imagen?</string>
+    <string name="label_guess_question_for_image_2">Escribe un poema sobre la imagen</string>
+    <string name="label_guess_question_for_media_1">¿Puedes describir esto?</string>
+    <string name="label_guess_question_for_media_2">Ayúdame a generar una publicación en redes sociales</string>
+    <string name="label_guess_question_for_media_3">¡Evalúa las habilidades fotográficas!</string>
+    <string name="llm_model_group_openai">OpenAI</string>
+    <string name="llm_model_group_gemini">Google</string>
+    <string name="llm_model_group_qwen">Tongyi Qianwen</string>
+    <string name="llm_model_group_claude">Anthropic</string>
+    <string name="llm_model_group_llama">Familia Llama</string>
+    <string name="llm_model_group_glm">Zhipu Qingyan</string>
+    <string name="llm_model_group_moonshot">Moonshot</string>
+    <string name="llm_model_group_stepfun">Step</string>
+    <string name="llm_model_group_baichuan">Baichuan</string>
+    <string name="llm_model_group_taichu">Taichu</string>
+    <string name="llm_model_group_lingyiwanw">Serie Yi</string>
+    <string name="llm_model_group_brain360">360 GPT</string>
+    <string name="llm_model_group_spark">iFLYTEK Spark</string>
+    <string name="llm_model_group_ernie">Wenxin Yiyan</string>
+    <string name="llm_model_group_mistral">Mistral</string>
+    <string name="llm_model_group_perplexity">Perplexity</string>
+    <string name="llm_model_group_groq">Groq</string>
+    <string name="llm_model_group_gemma">Gemma</string>
+    <string name="llm_model_group_llava">LlaVA</string>
+
+    <string name="label_untitled_chat">Nueva conversación</string>
+
+    <string name="label_service_usage_serper">Configura Serper para usar la búsqueda en línea de Google y acceder a los servicios web</string>
+
+    <string name="label_prompt_example_online_search">Según los resultados de la búsqueda, la ganadora del Premio Nobel de 2021 es Maria Ressa.</string>
+
+    <string name="chat_message_video_generation_working">Generando vídeo basado en "%1$s", puede tardar un tiempo en procesarse, por favor, revisa más tarde.</string>
+    <string name="chat_message_video_generation_generated_message">Este es el vídeo que he generado según tu solicitud</string>
+    <string name="chat_message_video_generation_generated_message_with_prompt">Este es el vídeo que he generado basándome en "%1$s"</string>
+    <string name="chat_message_text2img_generated">Esta es la imagen que he generado basándome en "%1$s"</string>
+
+    <string name="label_chat_message_error_template">Lo siento, se produjo un error, inténtalo de nuevo más tarde (%1$s)</string>
+
+    <string name="label_datetime_just_now">Ahora mismo</string>
+    <string name="label_date_time_today">Hoy</string>
+    <string name="label_date_time_yesterday">Ayer</string>
+    <string name="label_date_time_two_days_ago">Anteayer</string>
+    <string name="label_date_time_dawn">Mañana</string>
+    <string name="label_date_time_morning">Mañana</string>
+    <string name="label_date_time_noon">Mediodía</string>
+    <string name="label_date_time_afternoon">Tarde</string>
+    <string name="label_date_time_evening">Noche</string>
+    <plurals name="label_date_time_min_ago">
+        <item quantity="one">Hace %d minuto</item>
+        <item quantity="other">Hace %d minutos</item>
+    </plurals>
+
+
+    <string name="label_user_join_at">
+        Unió el <xliff:g id="time" example="2022-01-01">%1$s</xliff:g>
+    </string>
+</resources>

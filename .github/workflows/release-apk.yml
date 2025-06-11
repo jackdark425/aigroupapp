@@ -1,0 +1,226 @@
+name: Release APK
+
+on:
+  push:
+    tags:
+      - 'v*'
+  workflow_dispatch:
+    inputs:
+      version_name:
+        description: 'Version name for the release'
+        required: true
+        default: '1.0.0'
+
+jobs:
+  build-and-release:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      
+    - name: Set up JDK 17
+      uses: actions/setup-java@v4
+      with:
+        java-version: '17'
+        distribution: 'temurin'
+        
+    - name: Cache Gradle packages
+      uses: actions/cache@v4
+      with:
+        path: |
+          ~/.gradle/caches
+          ~/.gradle/wrapper
+        key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle*', '**/gradle-wrapper.properties') }}
+        restore-keys: |
+          ${{ runner.os }}-gradle-
+          
+    - name: Grant execute permission for gradlew
+      run: chmod +x gradlew
+      
+    - name: Verify environment
+      run: |
+        echo "Java version:"
+        java -version
+        echo "Gradle version:"
+        ./gradlew --version
+        echo "Android SDK location: $ANDROID_HOME"
+        
+    - name: Create secrets.properties
+      run: |
+        # 只添加已配置的 secrets，没有配置的就跳过
+        touch secrets.properties
+        
+        # 必要的变量
+        if [ -n "${{ secrets.DEEPSEEK_API_KEY }}" ]; then
+          echo "DEEPSEEK_API_KEY=${{ secrets.DEEPSEEK_API_KEY }}" >> secrets.properties
+        fi
+        
+        if [ -n "${{ secrets.CUSTOM_PROVIDER_API_BASE_URL }}" ]; then
+          echo "CUSTOM_PROVIDER_API_BASE_URL=${{ secrets.CUSTOM_PROVIDER_API_BASE_URL }}" >> secrets.properties
+        fi
+        
+        if [ -n "${{ secrets.CUSTOM_PROVIDER_API_KEY }}" ]; then
+          echo "CUSTOM_PROVIDER_API_KEY=${{ secrets.CUSTOM_PROVIDER_API_KEY }}" >> secrets.properties
+        fi
+        
+        # 可选的变量
+        if [ -n "${{ secrets.AZURE_API_KEY }}" ]; then
+          echo "azureApiKey=${{ secrets.AZURE_API_KEY }}" >> secrets.properties
+        fi
+        
+        if [ -n "${{ secrets.AZURE_REGION }}" ]; then
+          echo "azureRegion=${{ secrets.AZURE_REGION }}" >> secrets.properties
+        fi
+        
+        if [ -n "${{ secrets.TEST_AI_HUB_MIX_TOKEN }}" ]; then
+          echo "testAiHubMixToken=${{ secrets.TEST_AI_HUB_MIX_TOKEN }}" >> secrets.properties
+        fi
+        
+        echo "Created secrets.properties with available secrets"
+        echo "secrets.properties content (without sensitive data):"
+        grep -v "API_KEY\|TOKEN" secrets.properties || echo "No non-sensitive properties to show"
+        
+    - name: Generate keystore from base64
+      env:
+        KEYSTORE_BASE64: ${{ secrets.KEYSTORE_BASE64 }}
+        KEYSTORE_PASSWORD: ${{ secrets.KEYSTORE_PASSWORD }}
+        KEY_ALIAS: ${{ secrets.KEY_ALIAS }}
+        KEY_PASSWORD: ${{ secrets.KEY_PASSWORD }}
+      run: |
+        echo "=== 从Base64生成keystore.jks ==="
+        
+        if [ -z "$KEYSTORE_BASE64" ]; then
+            echo "❌ KEYSTORE_BASE64 为空"
+            exit 1
+        else
+            echo "✅ KEYSTORE_BASE64 存在"
+        fi
+        
+        echo "解码base64并生成keystore.jks..."
+        echo "$KEYSTORE_BASE64" | base64 -d > keystore.jks
+        
+        echo "验证生成的keystore文件..."
+        if [ -f "keystore.jks" ]; then
+            echo "✅ keystore.jks 文件已生成"
+            echo "文件大小: $(stat -c%s keystore.jks) bytes"
+            echo "文件权限: $(ls -la keystore.jks)"
+        else
+            echo "❌ keystore.jks 文件生成失败"
+            exit 1
+        fi
+        
+        echo ""
+        echo "2. 检查签名环境变量:"
+        if [ -z "$KEYSTORE_PASSWORD" ]; then
+            echo "❌ KEYSTORE_PASSWORD 为空"
+            exit 1
+        else
+            echo "✅ KEYSTORE_PASSWORD 存在"
+        fi
+        
+        if [ -z "$KEY_ALIAS" ]; then
+            echo "❌ KEY_ALIAS 为空"
+            exit 1
+        else
+            echo "✅ KEY_ALIAS 存在: $KEY_ALIAS"
+        fi
+        
+        if [ -z "$KEY_PASSWORD" ]; then
+            echo "❌ KEY_PASSWORD 为空"
+            exit 1
+        else
+            echo "✅ KEY_PASSWORD 存在"
+        fi
+        
+        echo ""
+        echo "✅ 所有签名配置验证通过"
+
+    - name: Create signing config
+      env:
+        KEYSTORE_PASSWORD: ${{ secrets.KEYSTORE_PASSWORD }}
+        KEY_ALIAS: ${{ secrets.KEY_ALIAS }}
+        KEY_PASSWORD: ${{ secrets.KEY_PASSWORD }}
+      run: |
+        echo "=== 创建签名配置 ==="
+        
+        # 创建keystore.properties文件（本地开发用）
+        cat > keystore.properties << EOF
+        storeFile=keystore.jks
+        storePassword=${{ secrets.KEYSTORE_PASSWORD }}
+        keyAlias=${{ secrets.KEY_ALIAS }}
+        keyPassword=${{ secrets.KEY_PASSWORD }}
+        EOF
+        
+        # 设置Gradle属性（CI/CD环境用）
+        echo "KEYSTORE_PASSWORD=${{ secrets.KEYSTORE_PASSWORD }}" >> gradle.properties
+        echo "KEY_ALIAS=${{ secrets.KEY_ALIAS }}" >> gradle.properties
+        echo "KEY_PASSWORD=${{ secrets.KEY_PASSWORD }}" >> gradle.properties
+        
+        echo "✅ 签名配置创建完成"
+        echo ""
+        echo "keystore.properties content:"
+        cat keystore.properties | sed 's/storePassword=.*/storePassword=*****/' | sed 's/keyPassword=.*/keyPassword=*****/'
+        echo ""
+        echo "gradle.properties content (signing part):"
+        grep -E "(KEYSTORE_|KEY_)" gradle.properties | sed 's/=.*/=*****/' || echo "No signing properties found in gradle.properties"
+        
+    - name: Update version name
+      if: ${{ github.event.inputs.version_name }}
+      run: |
+        sed -i 's/versionName = "[^"]*"/versionName = "${{ github.event.inputs.version_name }}"/' app/build.gradle.kts
+        
+    - name: Build Release APK
+      run: |
+        echo "Starting Gradle build..."
+        ./gradlew assembleRelease --stacktrace --info
+        
+    - name: Verify APK and signing
+      run: |
+        echo "Checking build outputs..."
+        ls -la app/build/outputs/apk/release/
+        
+        if [ -f "app/build/outputs/apk/release/app-release.apk" ]; then
+          echo "✅ APK file found"
+          
+          # 验证APK签名
+          if command -v $ANDROID_HOME/build-tools/34.0.0/apksigner &> /dev/null; then
+            echo "Verifying APK signature..."
+            $ANDROID_HOME/build-tools/34.0.0/apksigner verify --print-certs app/build/outputs/apk/release/app-release.apk
+            echo "✅ APK signature verified"
+          else
+            echo "⚠️ apksigner not found, skipping signature verification"
+          fi
+          
+          # 显示APK信息
+          APK_SIZE=$(stat -c%s app/build/outputs/apk/release/app-release.apk)
+          echo "📱 APK size: $(($APK_SIZE / 1024 / 1024)) MB"
+        else
+          echo "❌ APK file not found!"
+          echo "Available files in release directory:"
+          find app/build/outputs/apk/release/ -type f || echo "No files found"
+          exit 1
+        fi
+          
+    - name: Rename APK
+      run: |
+        VERSION_NAME=${{ github.event.inputs.version_name || github.ref_name }}
+        mv app/build/outputs/apk/release/app-release.apk app/build/outputs/apk/release/AIGroupApp-${VERSION_NAME}.apk
+        echo "✅ APK renamed to AIGroupApp-${VERSION_NAME}.apk"
+        
+    - name: Create Release
+      uses: softprops/action-gh-release@v1
+      if: startsWith(github.ref, 'refs/tags/')
+      with:
+        files: app/build/outputs/apk/release/AIGroupApp-*.apk
+        generate_release_notes: true
+        draft: false
+        prerelease: false
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        
+    - name: Upload APK Artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: release-apk-${{ github.event.inputs.version_name || github.ref_name }}
+        path: app/build/outputs/apk/release/AIGroupApp-*.apk
