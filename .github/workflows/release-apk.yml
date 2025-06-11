@@ -10,6 +10,15 @@ on:
         description: 'Version name for the release'
         required: true
         default: '1.0.0'
+      release_notes:
+        description: 'Custom release notes (optional)'
+        required: false
+        default: ''
+      prerelease:
+        description: 'Mark as pre-release'
+        required: false
+        default: false
+        type: boolean
 
 jobs:
   build-and-release:
@@ -207,15 +216,69 @@ jobs:
         VERSION_NAME=${{ github.event.inputs.version_name || github.ref_name }}
         mv app/build/outputs/apk/release/app-release.apk app/build/outputs/apk/release/AIGroupApp-${VERSION_NAME}.apk
         echo "✅ APK renamed to AIGroupApp-${VERSION_NAME}.apk"
+
+    - name: Create tag for manual release
+      if: github.event_name == 'workflow_dispatch'
+      run: |
+        VERSION_NAME=${{ github.event.inputs.version_name }}
+        echo "Creating tag for version: $VERSION_NAME"
+        git config user.name "github-actions[bot]"
+        git config user.email "github-actions[bot]@users.noreply.github.com"
+        
+        # 检查标签是否已存在
+        if git rev-parse "refs/tags/$VERSION_NAME" >/dev/null 2>&1; then
+          echo "Tag $VERSION_NAME already exists, deleting it first"
+          git tag -d "$VERSION_NAME" || true
+          git push origin ":refs/tags/$VERSION_NAME" || true
+        fi
+        
+        # 创建新标签
+        git tag -a "$VERSION_NAME" -m "Release $VERSION_NAME (manual trigger)"
+        git push origin "$VERSION_NAME"
+        echo "✅ Tag $VERSION_NAME created and pushed"
         
     - name: Create Release
       uses: softprops/action-gh-release@v1
-      if: startsWith(github.ref, 'refs/tags/')
+      if: startsWith(github.ref, 'refs/tags/') || github.event_name == 'workflow_dispatch'
       with:
+        tag_name: ${{ github.event.inputs.version_name || github.ref_name }}
+        name: Release ${{ github.event.inputs.version_name || github.ref_name }}
         files: app/build/outputs/apk/release/AIGroupApp-*.apk
         generate_release_notes: true
         draft: false
-        prerelease: false
+        prerelease: ${{ github.event.inputs.prerelease == 'true' || false }}
+        make_latest: ${{ github.event.inputs.prerelease != 'true' }}
+        body: |
+          ## 🚀 AIGroup Mobile App Release ${{ github.event.inputs.version_name || github.ref_name }}
+          
+          ### 📱 下载安装包
+          点击下方链接下载最新版本的 AIGroup Mobile App：
+          
+          **[📥 下载 AIGroupApp-${{ github.event.inputs.version_name || github.ref_name }}.apk](https://github.com/${{ github.repository }}/releases/download/${{ github.event.inputs.version_name || github.ref_name }}/AIGroupApp-${{ github.event.inputs.version_name || github.ref_name }}.apk)**
+          
+          ### 🔧 构建信息
+          - **版本号**: `${{ github.event.inputs.version_name || github.ref_name }}`
+          - **构建ID**: `${{ github.run_id }}`
+          - **触发方式**: ${{ github.event_name == 'workflow_dispatch' && '🖱️ 手动触发' || '🏷️ 标签推送' }}
+          - **提交SHA**: `${{ github.sha }}`
+          - **构建时间**: ${{ github.run_started_at }}
+          - **发布类型**: ${{ github.event.inputs.prerelease == 'true' && '🧪 预发布版本' || '✅ 正式版本' }}
+          
+          ### 📋 更新内容
+          ${{ github.event.inputs.release_notes || (github.event_name == 'workflow_dispatch' && '此版本通过手动触发构建，详细更新内容请查看下方的自动生成发布说明或提交历史。' || '') }}
+          
+          ---
+          
+          ### 📖 安装说明
+          1. 下载上方的 APK 文件
+          2. 在 Android 设备上启用"未知来源"安装
+          3. 安装下载的 APK 文件
+          
+          ### ⚠️ 注意事项
+          - 请确保从官方 GitHub Release 页面下载
+          - 首次安装可能需要允许安装未知来源的应用
+          - 建议在安装前卸载旧版本以避免冲突
+          ${{ github.event.inputs.prerelease == 'true' && '- ⚠️ 这是预发布版本，可能包含未完全测试的功能' || '' }}
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         
@@ -224,3 +287,26 @@ jobs:
       with:
         name: release-apk-${{ github.event.inputs.version_name || github.ref_name }}
         path: app/build/outputs/apk/release/AIGroupApp-*.apk
+        retention-days: 30
+        
+    - name: Release Summary
+      if: startsWith(github.ref, 'refs/tags/') || github.event_name == 'workflow_dispatch'
+      run: |
+        VERSION_NAME=${{ github.event.inputs.version_name || github.ref_name }}
+        RELEASE_URL="https://github.com/${{ github.repository }}/releases/tag/${VERSION_NAME}"
+        APK_SIZE=$(stat -c%s app/build/outputs/apk/release/AIGroupApp-${VERSION_NAME}.apk)
+        APK_SIZE_MB=$(($APK_SIZE / 1024 / 1024))
+        
+        echo "## 🎉 发布成功！" >> $GITHUB_STEP_SUMMARY
+        echo "" >> $GITHUB_STEP_SUMMARY
+        echo "### 📋 发布信息" >> $GITHUB_STEP_SUMMARY
+        echo "- **版本**: \`${VERSION_NAME}\`" >> $GITHUB_STEP_SUMMARY
+        echo "- **APK 大小**: ${APK_SIZE_MB} MB" >> $GITHUB_STEP_SUMMARY
+        echo "- **触发方式**: ${{ github.event_name == 'workflow_dispatch' && '手动触发' || '标签推送' }}" >> $GITHUB_STEP_SUMMARY
+        echo "- **发布类型**: ${{ github.event.inputs.prerelease == 'true' && '预发布版本' || '正式版本' }}" >> $GITHUB_STEP_SUMMARY
+        echo "" >> $GITHUB_STEP_SUMMARY
+        echo "### 🔗 链接" >> $GITHUB_STEP_SUMMARY
+        echo "- [📥 下载 Release]($RELEASE_URL)" >> $GITHUB_STEP_SUMMARY
+        echo "- [📱 直接下载 APK](https://github.com/${{ github.repository }}/releases/download/${VERSION_NAME}/AIGroupApp-${VERSION_NAME}.apk)" >> $GITHUB_STEP_SUMMARY
+        echo "" >> $GITHUB_STEP_SUMMARY
+        echo "✅ APK 已成功构建并发布到 GitHub Release！"
