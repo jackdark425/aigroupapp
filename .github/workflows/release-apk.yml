@@ -1,5 +1,6 @@
 name: Release APK
-
+permissions:
+  contents: write  # 授予写入 repo 的权限
 on:
   push:
     tags:
